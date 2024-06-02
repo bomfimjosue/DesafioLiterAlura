@@ -1,0 +1,19 @@
+ Uma opção popular para buscar informações sobre livros é a API do Google Books. Ela oferece acesso a uma vasta coleção de metadados de livros, incluindo títulos, autores, gêneros e muito mais.
+
+Google Books API:
+A Google Books API permite que você faça consultas aos mais de 15 milhões de livros disponíveis no Google Books.
+Além de informações básicas, como título e autor, você também pode acessar resenhas, estantes e outros detalhes relacionados aos livros.
+Como Usar:
+Primeiro, você precisará obter uma chave de API do Google. Acesse a página de desenvolvedores do Google Books para obter instruções detalhadas.
+Com a chave de API em mãos, você pode fazer solicitações à API para buscar informações sobre livros.
+Exemplo de Solicitação:
+Para buscar um livro por termo de pesquisa (como título, autor ou gênero), faça uma requisição HTTP para o endpoint da API.
+Por exemplo, para buscar livros com o termo “Harry Potter”, você pode usar a seguinte URL:
+GET https://www.googleapis.com/books/v1/volumes?q=Harry+Potter&key=SUA_CHAVE_DE_API
+Substitua SUA_CHAVE_DE_API pela sua chave de API.
+Resposta JSON:
+A API retornará os resultados em formato JSON. Você precisará analisar essa resposta para extrair as informações relevantes.
+Limitações:
+Lembre-se de que a API tem um limite de solicitações por dia. Verifique a documentação oficial para mais detalhes.
+Outras Opções:
+Além da Google Books API, você também pode explorar outras APIs, como a API-Catalogo-de-Livros desenvolvida com Django Rest Framework.
