@@ -1,0 +1,19 @@
+Que desafio empolgante! Construir um catálogo de livros é uma ótima maneira de aplicar seus conhecimentos em programação. Vou fornecer algumas dicas para você começar:
+
+1. **Configuração do ambiente Java:**
+   Certifique-se de ter o ambiente Java configurado corretamente em sua máquina. Você precisará do JDK (Java Development Kit) instalado. Se ainda não o fez, baixe-o a partir do site oficial da Oracle.
+
+2. **Criação do Projeto:**
+   Crie um novo projeto Java em sua IDE preferida (como Eclipse, IntelliJ ou NetBeans). Defina a estrutura do projeto e organize os pacotes conforme necessário.
+
+3. **Consumo da API:**
+   Pesquise por uma API de livros que forneça informações sobre títulos, autores, gêneros etc. Existem várias APIs públicas disponíveis para esse propósito. Uma opção é a API do Google Books, que permite buscar livros por termos de pesquisa.
+
+4. **Análise da Resposta JSON:**
+   Quando você fizer uma solicitação à API, ela retornará dados em formato JSON. Você precisará analisar essa resposta para extrair as informações relevantes, como títulos, autores e outros detalhes dos livros.
+
+5. **Inserção e consulta no banco de dados:**
+   Crie um banco de dados (pode ser local ou em nuvem) para armazenar os dados dos livros. Defina uma tabela para os livros e outra para os autores. Ao receber os dados da API, insira-os no banco de dados.
+
+6. **Exibição de resultados aos usuários:**
+   Implemente a interação com o usuário via console. Ofereça opções para buscar livros por título, autor, gênero etc. Mostre os resultados ao usuário de forma clara e organizada.
