@@ -1,0 +1,38 @@
+
+1. **Menu de Opções:**
+   - Crie um menu com opções para o usuário escolher como deseja buscar os livros. Por exemplo:
+     ```
+     Bem-vindo ao LiterAlura - Catálogo de Livros!
+     Escolha uma opção:
+     1. Buscar por título
+     2. Buscar por autor
+     3. Buscar por gênero
+     4. Sair
+     ```
+
+2. **Implementação das Opções:**
+   - Dependendo da opção escolhida pelo usuário, execute a ação correspondente:
+     - **Buscar por Título:** Solicite ao usuário que digite o título do livro e mostre os resultados encontrados.
+     - **Buscar por Autor:** Peça ao usuário que insira o nome do autor e exiba os livros desse autor.
+     - **Buscar por Gênero:** Solicite o gênero desejado e liste os livros desse gênero.
+     - **Sair:** Encerre o programa.
+
+3. **Exibição dos Resultados:**
+   - Ao mostrar os resultados, formate as informações de maneira organizada. Por exemplo:
+     ```
+     Resultados da busca por título:
+     1. "Harry Potter e a Pedra Filosofal" - J.K. Rowling
+     2. "O Senhor dos Anéis" - J.R.R. Tolkien
+     ...
+     ```
+
+4. **Loop de Execução:**
+   - Coloque o programa em um loop para que o usuário possa fazer várias buscas sem precisar reiniciar o programa.
+
+5. **Integração com o Banco de Dados:**
+   - Se você estiver usando um banco de dados local (como o arquivo JSON mencionado anteriormente), leia os dados do arquivo e exiba os resultados conforme a opção escolhida.
+   - Se estiver usando um banco de dados relacional, consulte as tabelas de livros e autores para obter os dados.
+
+6. **Tratamento de Erros:**
+   - Lembre-se de tratar erros, como quando o usuário digita um título ou autor que não existe no catálogo.
+
