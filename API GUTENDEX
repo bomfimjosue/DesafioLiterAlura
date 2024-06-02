@@ -1,0 +1,41 @@
+A API "Gutendex" é uma excelente opção para buscar informações sobre livros do **Project Gutenberg**
+
+1. **Gutendex:**
+   - O **Gutendex** é uma API web simples e auto-hospedada para servir informações do catálogo de livros do **Project Gutenberg**, uma biblioteca online de ebooks gratuitos.
+   - Você pode experimentá-la em [gutendex.com](https://gutendex.com).
+
+2. **Por que usar o Gutendex?**
+   - O **Project Gutenberg** pode ser uma fonte útil de literatura, mas seu tamanho grande dificulta o acesso e a análise em grande escala.
+   - Assim, uma API com informações do catálogo é útil para automatizar essas tarefas.
+
+3. **Como funciona o Gutendex?**
+   - O Gutendex usa o **Django** para baixar os dados do catálogo e servi-los em uma API REST JSON simples.
+   - O **Project Gutenberg** não possui uma API pública própria, mas publica arquivos XML complicados em seus arquivos de backup noturnos.
+   - O Gutendex baixa esses arquivos, armazena os dados em um banco de dados e os publica em um formato mais simples.
+
+4. **Instalação:**
+   - Consulte o [guia de instalação](https://github.com/garethbjohnson/gutendex#installation).
+
+5. **API:**
+   - Quando o servidor estiver em execução, você verá uma página inicial com o nome "Gutendex" na URL raiz (por exemplo, [localhost:8000](http://localhost:8000) por padrão quando usando `manage.py` localmente).
+   - Execute seu próprio servidor, mas você pode testar consultas em [gutendex.com](https://gutendex.com).
+
+6. **Listas de Livros:**
+   - As listas de informações de livros no banco de dados são consultadas usando a API em `/books` (por exemplo, [gutendex.com/books](https://gutendex.com/books)).
+   - Os dados dos livros são retornados no formato JSON:
+     ```json
+     {
+       "count": <número>,
+       "next": <string ou null>,
+       "previous": <string ou null>,
+       "results": <array de livros>
+     }
+     ```
+   - Por padrão, os livros são ordenados por popularidade, determinada pelo número de downloads do Project Gutenberg.
+   - Você pode adicionar parâmetros às consultas de lista de livros em formato de URL. Por exemplo:
+     - `/books?author_year_start=1900&languages=en,fr` para obter livros escritos por autores vivos após 1899 e publicados em inglês ou francês.
+
+7. **Parâmetros de Consulta Disponíveis:**
+   - `author_year_start` e `author_year_end`: Use-os para encontrar livros com pelo menos um autor vivo em um determinado intervalo de anos.
+   - `copyright`: Use para encontrar livros com um determinado status de direitos autorais (verdadeiro para livros com direitos autorais existentes, falso para livros em domínio público nos EUA ou nulo para livros sem informações de direitos autorais disponíveis).
+
